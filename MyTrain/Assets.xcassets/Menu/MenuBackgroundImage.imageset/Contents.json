@@ -6,12 +6,12 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "menu_bg@2x.png",
+      "filename" : "menu_bg_950x1109@3x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "menu_bg@3x.png",
+      "filename" : "menu_bg_1242x1836@3x.png",
       "scale" : "3x"
     }
   ],

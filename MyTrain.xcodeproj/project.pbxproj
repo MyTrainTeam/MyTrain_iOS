@@ -16,8 +16,10 @@
 		DF7CE0071BD1B73C001CCFC4 /* MyTrainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CE0061BD1B73C001CCFC4 /* MyTrainTests.swift */; };
 		DF7CE0121BD1B73D001CCFC4 /* MyTrainUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CE0111BD1B73D001CCFC4 /* MyTrainUITests.swift */; };
 		DF7CE0241BD1C25F001CCFC4 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CE0231BD1C25F001CCFC4 /* MenuViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		DF7CE02C1BD1C33D001CCFC4 /* MyTrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CE02B1BD1C33D001CCFC4 /* MyTrainViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		DF7CE02E1BD1C5F5001CCFC4 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CE02D1BD1C5F5001CCFC4 /* MenuTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		DF7CE0321BD256FA001CCFC4 /* WelcomeMyTrainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CE0311BD256FA001CCFC4 /* WelcomeMyTrainTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		DF7CE0341BD25700001CCFC4 /* WelcomeMyTrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CE0331BD25700001CCFC4 /* WelcomeMyTrainViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		DF7CE0381BD25FD6001CCFC4 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CE0371BD25FD6001CCFC4 /* UIColorExtension.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +58,10 @@
 		DF7CE0131BD1B73D001CCFC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF7CE0231BD1C25F001CCFC4 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = Views/Menu/MenuViewController.swift; sourceTree = "<group>"; };
 		DF7CE0251BD1C27B001CCFC4 /* MyTrain-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyTrain-Bridging-Header.h"; sourceTree = "<group>"; };
-		DF7CE02B1BD1C33D001CCFC4 /* MyTrainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTrainViewController.swift; path = Views/MyTrain/MyTrainViewController.swift; sourceTree = "<group>"; };
 		DF7CE02D1BD1C5F5001CCFC4 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableViewCell.swift; path = Views/Menu/MenuTableViewCell.swift; sourceTree = "<group>"; };
+		DF7CE0311BD256FA001CCFC4 /* WelcomeMyTrainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeMyTrainTableViewController.swift; path = Views/WelcomeMyTrain/WelcomeMyTrainTableViewController.swift; sourceTree = "<group>"; };
+		DF7CE0331BD25700001CCFC4 /* WelcomeMyTrainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeMyTrainViewController.swift; path = Views/WelcomeMyTrain/WelcomeMyTrainViewController.swift; sourceTree = "<group>"; };
+		DF7CE0371BD25FD6001CCFC4 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = Librairies/UIColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,7 @@
 			children = (
 				DF7CDFEE1BD1B73C001CCFC4 /* AppDelegate.swift */,
 				DF7CE01F1BD1BE10001CCFC4 /* Views */,
+				DF7CE0361BD25FBB001CCFC4 /* Librairies */,
 				DF7CDFF21BD1B73C001CCFC4 /* Main.storyboard */,
 				DF7CDFF81BD1B73C001CCFC4 /* Assets.xcassets */,
 				DF7CDFFA1BD1B73C001CCFC4 /* LaunchScreen.storyboard */,
@@ -161,7 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				DF7CE0201BD1BE1F001CCFC4 /* Menu */,
-				DF7CE02A1BD1C325001CCFC4 /* MyTrain */,
+				DF7CE02A1BD1C325001CCFC4 /* WelcomeMyTrain */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -184,12 +189,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DF7CE02A1BD1C325001CCFC4 /* MyTrain */ = {
+		DF7CE02A1BD1C325001CCFC4 /* WelcomeMyTrain */ = {
 			isa = PBXGroup;
 			children = (
-				DF7CE02B1BD1C33D001CCFC4 /* MyTrainViewController.swift */,
+				DF7CE0331BD25700001CCFC4 /* WelcomeMyTrainViewController.swift */,
+				DF7CE0311BD256FA001CCFC4 /* WelcomeMyTrainTableViewController.swift */,
 			);
-			name = MyTrain;
+			name = WelcomeMyTrain;
+			sourceTree = "<group>";
+		};
+		DF7CE0361BD25FBB001CCFC4 /* Librairies */ = {
+			isa = PBXGroup;
+			children = (
+				DF7CE0371BD25FD6001CCFC4 /* UIColorExtension.swift */,
+			);
+			name = Librairies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,8 +373,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF7CE02E1BD1C5F5001CCFC4 /* MenuTableViewCell.swift in Sources */,
+				DF7CE0381BD25FD6001CCFC4 /* UIColorExtension.swift in Sources */,
 				DF7CDFEF1BD1B73C001CCFC4 /* AppDelegate.swift in Sources */,
-				DF7CE02C1BD1C33D001CCFC4 /* MyTrainViewController.swift in Sources */,
+				DF7CE0341BD25700001CCFC4 /* WelcomeMyTrainViewController.swift in Sources */,
+				DF7CE0321BD256FA001CCFC4 /* WelcomeMyTrainTableViewController.swift in Sources */,
 				DF7CDFF71BD1B73C001CCFC4 /* MyTrain.xcdatamodeld in Sources */,
 				DF7CE0241BD1C25F001CCFC4 /* MenuViewController.swift in Sources */,
 			);

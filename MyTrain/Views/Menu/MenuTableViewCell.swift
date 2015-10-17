@@ -27,5 +27,4 @@ class MenuTableViewCell: UITableViewCell {
             }
         }
     }
-
 }
