@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B9469E0A2751816A6B273A3 /* libPods-MyTrain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A654D30A6D741B5169FC82FF /* libPods-MyTrain.a */; };
 		DF7CDFEF1BD1B73C001CCFC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CDFEE1BD1B73C001CCFC4 /* AppDelegate.swift */; };
-		DF7CDFF11BD1B73C001CCFC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CDFF01BD1B73C001CCFC4 /* ViewController.swift */; };
 		DF7CDFF41BD1B73C001CCFC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF7CDFF21BD1B73C001CCFC4 /* Main.storyboard */; };
 		DF7CDFF71BD1B73C001CCFC4 /* MyTrain.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF7CDFF51BD1B73C001CCFC4 /* MyTrain.xcdatamodeld */; };
 		DF7CDFF91BD1B73C001CCFC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF7CDFF81BD1B73C001CCFC4 /* Assets.xcassets */; };
 		DF7CDFFC1BD1B73C001CCFC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF7CDFFA1BD1B73C001CCFC4 /* LaunchScreen.storyboard */; };
 		DF7CE0071BD1B73C001CCFC4 /* MyTrainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CE0061BD1B73C001CCFC4 /* MyTrainTests.swift */; };
 		DF7CE0121BD1B73D001CCFC4 /* MyTrainUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CE0111BD1B73D001CCFC4 /* MyTrainUITests.swift */; };
+		DF7CE0241BD1C25F001CCFC4 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CE0231BD1C25F001CCFC4 /* MenuViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		DF7CE02C1BD1C33D001CCFC4 /* MyTrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CE02B1BD1C33D001CCFC4 /* MyTrainViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		DF7CE02E1BD1C5F5001CCFC4 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CE02D1BD1C5F5001CCFC4 /* MenuTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C858EF01A995D8CD94ED487 /* Pods-MyTrain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTrain.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyTrain/Pods-MyTrain.debug.xcconfig"; sourceTree = "<group>"; };
+		A654D30A6D741B5169FC82FF /* libPods-MyTrain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyTrain.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFFF47C28FA862997D511987 /* Pods-MyTrain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTrain.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTrain/Pods-MyTrain.release.xcconfig"; sourceTree = "<group>"; };
 		DF7CDFEB1BD1B73C001CCFC4 /* MyTrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF7CDFEE1BD1B73C001CCFC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DF7CDFF01BD1B73C001CCFC4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DF7CDFF31BD1B73C001CCFC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF7CDFF61BD1B73C001CCFC4 /* MyTrain.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyTrain.xcdatamodel; sourceTree = "<group>"; };
 		DF7CDFF81BD1B73C001CCFC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +54,10 @@
 		DF7CE00D1BD1B73D001CCFC4 /* MyTrainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTrainUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF7CE0111BD1B73D001CCFC4 /* MyTrainUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTrainUITests.swift; sourceTree = "<group>"; };
 		DF7CE0131BD1B73D001CCFC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF7CE0231BD1C25F001CCFC4 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = Views/Menu/MenuViewController.swift; sourceTree = "<group>"; };
+		DF7CE0251BD1C27B001CCFC4 /* MyTrain-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyTrain-Bridging-Header.h"; sourceTree = "<group>"; };
+		DF7CE02B1BD1C33D001CCFC4 /* MyTrainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTrainViewController.swift; path = Views/MyTrain/MyTrainViewController.swift; sourceTree = "<group>"; };
+		DF7CE02D1BD1C5F5001CCFC4 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableViewCell.swift; path = Views/Menu/MenuTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B9469E0A2751816A6B273A3 /* libPods-MyTrain.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +86,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3642149E3C0948F7BDBFFE62 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A654D30A6D741B5169FC82FF /* libPods-MyTrain.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B0E48FD196058D8E7F209FB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5C858EF01A995D8CD94ED487 /* Pods-MyTrain.debug.xcconfig */,
+				BFFF47C28FA862997D511987 /* Pods-MyTrain.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DF7CDFE21BD1B73C001CCFC4 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +110,8 @@
 				DF7CE0051BD1B73C001CCFC4 /* MyTrainTests */,
 				DF7CE0101BD1B73D001CCFC4 /* MyTrainUITests */,
 				DF7CDFEC1BD1B73C001CCFC4 /* Products */,
+				5B0E48FD196058D8E7F209FB /* Pods */,
+				3642149E3C0948F7BDBFFE62 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,12 +129,12 @@
 			isa = PBXGroup;
 			children = (
 				DF7CDFEE1BD1B73C001CCFC4 /* AppDelegate.swift */,
-				DF7CDFF01BD1B73C001CCFC4 /* ViewController.swift */,
+				DF7CE01F1BD1BE10001CCFC4 /* Views */,
 				DF7CDFF21BD1B73C001CCFC4 /* Main.storyboard */,
 				DF7CDFF81BD1B73C001CCFC4 /* Assets.xcassets */,
 				DF7CDFFA1BD1B73C001CCFC4 /* LaunchScreen.storyboard */,
-				DF7CDFFD1BD1B73C001CCFC4 /* Info.plist */,
 				DF7CDFF51BD1B73C001CCFC4 /* MyTrain.xcdatamodeld */,
+				DF7CE0291BD1C284001CCFC4 /* Supporting Files */,
 			);
 			path = MyTrain;
 			sourceTree = "<group>";
@@ -128,6 +157,41 @@
 			path = MyTrainUITests;
 			sourceTree = "<group>";
 		};
+		DF7CE01F1BD1BE10001CCFC4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DF7CE0201BD1BE1F001CCFC4 /* Menu */,
+				DF7CE02A1BD1C325001CCFC4 /* MyTrain */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		DF7CE0201BD1BE1F001CCFC4 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				DF7CE0231BD1C25F001CCFC4 /* MenuViewController.swift */,
+				DF7CE02D1BD1C5F5001CCFC4 /* MenuTableViewCell.swift */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		DF7CE0291BD1C284001CCFC4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DF7CDFFD1BD1B73C001CCFC4 /* Info.plist */,
+				DF7CE0251BD1C27B001CCFC4 /* MyTrain-Bridging-Header.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DF7CE02A1BD1C325001CCFC4 /* MyTrain */ = {
+			isa = PBXGroup;
+			children = (
+				DF7CE02B1BD1C33D001CCFC4 /* MyTrainViewController.swift */,
+			);
+			name = MyTrain;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +199,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DF7CE0161BD1B73D001CCFC4 /* Build configuration list for PBXNativeTarget "MyTrain" */;
 			buildPhases = (
+				97128938399076BA7DF2D342 /* Check Pods Manifest.lock */,
 				DF7CDFE71BD1B73C001CCFC4 /* Sources */,
 				DF7CDFE81BD1B73C001CCFC4 /* Frameworks */,
 				DF7CDFE91BD1B73C001CCFC4 /* Resources */,
+				5A8370D867562539C877F971 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,6 +256,7 @@
 		DF7CDFE31BD1B73C001CCFC4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = MyTrainTeam;
 				TargetAttributes = {
@@ -253,14 +320,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5A8370D867562539C877F971 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyTrain/Pods-MyTrain-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97128938399076BA7DF2D342 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DF7CDFE71BD1B73C001CCFC4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF7CDFF11BD1B73C001CCFC4 /* ViewController.swift in Sources */,
+				DF7CE02E1BD1C5F5001CCFC4 /* MenuTableViewCell.swift in Sources */,
 				DF7CDFEF1BD1B73C001CCFC4 /* AppDelegate.swift in Sources */,
+				DF7CE02C1BD1C33D001CCFC4 /* MyTrainViewController.swift in Sources */,
 				DF7CDFF71BD1B73C001CCFC4 /* MyTrain.xcdatamodeld in Sources */,
+				DF7CE0241BD1C25F001CCFC4 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,23 +500,32 @@
 		};
 		DF7CE0171BD1B73D001CCFC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C858EF01A995D8CD94ED487 /* Pods-MyTrain.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MyTrain/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mytrainteam.MyTrain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyTrain/MyTrain-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		DF7CE0181BD1B73D001CCFC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFFF47C28FA862997D511987 /* Pods-MyTrain.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MyTrain/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mytrainteam.MyTrain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyTrain/MyTrain-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -485,6 +596,7 @@
 				DF7CE0181BD1B73D001CCFC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DF7CE0191BD1B73D001CCFC4 /* Build configuration list for PBXNativeTarget "MyTrainTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +605,7 @@
 				DF7CE01B1BD1B73D001CCFC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DF7CE01C1BD1B73D001CCFC4 /* Build configuration list for PBXNativeTarget "MyTrainUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +614,7 @@
 				DF7CE01E1BD1B73D001CCFC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
