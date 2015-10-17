@@ -26,11 +26,6 @@ class WelcomeMyTrainTableViewController: UITableViewController {
         self.tableView.separatorColor = tableViewColor
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     override func tableView(_tableView: UITableView,
         willDisplayCell cell: UITableViewCell,
         forRowAtIndexPath indexPath: NSIndexPath) {

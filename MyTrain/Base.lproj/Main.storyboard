@@ -331,6 +331,23 @@
                                     <action selector="compostTicketAction:" destination="Yt0-bs-bEt" eventType="touchUpInside" id="PRs-3u-fUy"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WelcomeMyTrainTicketImage" translatesAutoresizingMaskIntoConstraints="NO" id="K7Y-tc-g54">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="K7Y-tc-g54" secondAttribute="height" multiplier="1:1" id="y2H-Aj-Ni1"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="y2H-Aj-Ni1"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="y2H-Aj-Ni1"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
@@ -339,6 +356,9 @@
                                 <variation key="heightClass=regular" constant="25"/>
                             </constraint>
                             <constraint firstItem="rKv-vh-usG" firstAttribute="trailing" secondItem="t23-E9-Crd" secondAttribute="trailingMargin" id="0tT-lN-6Ip"/>
+                            <constraint firstItem="olp-qC-uPd" firstAttribute="top" secondItem="K7Y-tc-g54" secondAttribute="bottom" constant="20" id="6LC-R1-vTy">
+                                <variation key="heightClass=regular" constant="30"/>
+                            </constraint>
                             <constraint firstItem="RfG-A9-Bny" firstAttribute="trailing" secondItem="t23-E9-Crd" secondAttribute="trailingMargin" id="EjE-s3-8P5"/>
                             <constraint firstItem="bxZ-d5-Yz5" firstAttribute="top" secondItem="RfG-A9-Bny" secondAttribute="bottom" constant="25" id="Jj4-Pf-Phf"/>
                             <constraint firstItem="rKv-vh-usG" firstAttribute="leading" secondItem="t23-E9-Crd" secondAttribute="leadingMargin" id="RKj-Uo-VIh"/>
@@ -348,6 +368,10 @@
                             <constraint firstAttribute="trailing" secondItem="BKx-Lu-BS5" secondAttribute="trailing" id="gvI-uX-j3C"/>
                             <constraint firstItem="RfG-A9-Bny" firstAttribute="leading" secondItem="t23-E9-Crd" secondAttribute="leadingMargin" id="nCL-95-dBN"/>
                             <constraint firstItem="bxZ-d5-Yz5" firstAttribute="centerX" secondItem="t23-E9-Crd" secondAttribute="centerX" id="oae-i4-xjw"/>
+                            <constraint firstItem="K7Y-tc-g54" firstAttribute="centerX" secondItem="t23-E9-Crd" secondAttribute="centerX" id="pJc-Y5-4S6"/>
+                            <constraint firstItem="K7Y-tc-g54" firstAttribute="top" secondItem="bxZ-d5-Yz5" secondAttribute="bottom" constant="29" id="qZT-vZ-ID7">
+                                <variation key="heightClass=regular" constant="30"/>
+                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -355,6 +379,7 @@
                                 <exclude reference="rKv-vh-usG"/>
                                 <exclude reference="BKx-Lu-BS5"/>
                                 <exclude reference="bxZ-d5-Yz5"/>
+                                <exclude reference="K7Y-tc-g54"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="0tT-lN-6Ip"/>
@@ -368,6 +393,9 @@
                                 <exclude reference="nCL-95-dBN"/>
                                 <exclude reference="Jj4-Pf-Phf"/>
                                 <exclude reference="oae-i4-xjw"/>
+                                <exclude reference="pJc-Y5-4S6"/>
+                                <exclude reference="qZT-vZ-ID7"/>
+                                <exclude reference="6LC-R1-vTy"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -376,6 +404,7 @@
                                 <include reference="rKv-vh-usG"/>
                                 <include reference="BKx-Lu-BS5"/>
                                 <include reference="bxZ-d5-Yz5"/>
+                                <include reference="K7Y-tc-g54"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="0tT-lN-6Ip"/>
@@ -389,6 +418,9 @@
                                 <include reference="nCL-95-dBN"/>
                                 <include reference="Jj4-Pf-Phf"/>
                                 <include reference="oae-i4-xjw"/>
+                                <include reference="pJc-Y5-4S6"/>
+                                <include reference="qZT-vZ-ID7"/>
+                                <include reference="6LC-R1-vTy"/>
                             </mask>
                         </variation>
                     </view>
@@ -666,6 +698,7 @@
                                         <variation key="heightClass=regular" constant="180"/>
                                     </constraint>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <state key="normal" title="Retour à quai">
                                     <color key="titleColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -687,126 +720,30 @@
                                     <action selector="quitTrainAction:" destination="A3C-pI-Cjb" eventType="touchUpInside" id="HgU-Z6-ioR"/>
                                 </connections>
                             </button>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xb0-fv-IYS">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XsF-U3-2ra">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="110" id="2xY-d3-OJE">
-                                        <variation key="heightClass=regular" constant="87"/>
+                                    <constraint firstAttribute="height" constant="143" id="3dw-Is-HWq">
+                                        <variation key="heightClass=regular" constant="207"/>
                                     </constraint>
-                                    <constraint firstAttribute="height" constant="243" id="bVS-jN-xkz"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="2xY-d3-OJE"/>
-                                        <exclude reference="bVS-jN-xkz"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular">
-                                    <mask key="constraints">
-                                        <exclude reference="2xY-d3-OJE"/>
-                                        <include reference="bVS-jN-xkz"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <segue destination="A8H-xA-Cvn" kind="embed" identifier="MyTrainTableViewController" id="xW9-TF-x8J"/>
-                                </connections>
-                            </containerView>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="dJC-O7-MDc" firstAttribute="trailing" secondItem="xaY-cg-JeI" secondAttribute="trailingMargin" id="6EB-RB-zl0"/>
-                            <constraint firstItem="3m9-h4-75m" firstAttribute="top" secondItem="xb0-fv-IYS" secondAttribute="bottom" constant="8" id="9nz-cj-XKw">
-                                <variation key="heightClass=regular" constant="0.0"/>
-                            </constraint>
-                            <constraint firstItem="dJC-O7-MDc" firstAttribute="top" secondItem="uTR-96-VUh" secondAttribute="bottom" constant="25" id="9vy-WL-7h0"/>
-                            <constraint firstItem="jny-pB-ytU" firstAttribute="top" secondItem="3m9-h4-75m" secondAttribute="bottom" id="Cjw-UZ-5xP"/>
-                            <constraint firstItem="3m9-h4-75m" firstAttribute="leading" secondItem="xaY-cg-JeI" secondAttribute="leading" id="NwP-0N-Khg"/>
-                            <constraint firstAttribute="trailing" secondItem="3m9-h4-75m" secondAttribute="trailing" id="Q94-c2-fBg"/>
-                            <constraint firstAttribute="trailing" secondItem="xb0-fv-IYS" secondAttribute="trailing" id="dID-Bh-uxI"/>
-                            <constraint firstItem="xb0-fv-IYS" firstAttribute="leading" secondItem="xaY-cg-JeI" secondAttribute="leading" id="phW-DD-VmY"/>
-                            <constraint firstItem="3m9-h4-75m" firstAttribute="centerX" secondItem="xaY-cg-JeI" secondAttribute="centerX" id="tNG-bd-Qhv"/>
-                            <constraint firstItem="dJC-O7-MDc" firstAttribute="leading" secondItem="xaY-cg-JeI" secondAttribute="leadingMargin" id="zPj-gV-Jqw"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="dJC-O7-MDc"/>
-                                <exclude reference="3m9-h4-75m"/>
-                                <exclude reference="xb0-fv-IYS"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="6EB-RB-zl0"/>
-                                <exclude reference="9vy-WL-7h0"/>
-                                <exclude reference="zPj-gV-Jqw"/>
-                                <exclude reference="dID-Bh-uxI"/>
-                                <exclude reference="phW-DD-VmY"/>
-                                <exclude reference="9nz-cj-XKw"/>
-                                <exclude reference="NwP-0N-Khg"/>
-                                <exclude reference="Q94-c2-fBg"/>
-                                <exclude reference="tNG-bd-Qhv"/>
-                                <exclude reference="Cjw-UZ-5xP"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular">
-                            <mask key="subviews">
-                                <include reference="dJC-O7-MDc"/>
-                                <include reference="3m9-h4-75m"/>
-                                <include reference="xb0-fv-IYS"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="6EB-RB-zl0"/>
-                                <include reference="9vy-WL-7h0"/>
-                                <include reference="zPj-gV-Jqw"/>
-                                <include reference="dID-Bh-uxI"/>
-                                <include reference="phW-DD-VmY"/>
-                                <include reference="9nz-cj-XKw"/>
-                                <include reference="NwP-0N-Khg"/>
-                                <include reference="Q94-c2-fBg"/>
-                                <exclude reference="tNG-bd-Qhv"/>
-                                <include reference="Cjw-UZ-5xP"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <navigationItem key="navigationItem" title="My Train" id="hfv-6j-Yee">
-                        <barButtonItem key="leftBarButtonItem" image="MenuIcon" id="5Sr-PD-AP8">
-                            <connections>
-                                <action selector="menuAction:" destination="A3C-pI-Cjb" id="xlr-Tp-Yv6"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="tableViewContainer" destination="xb0-fv-IYS" id="gGP-Wg-7H7"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wf2-eC-fl6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2481" y="1171.5"/>
-        </scene>
-        <!--My Train Table View Controller-->
-        <scene sceneID="xB6-3N-nZL">
-            <objects>
-                <tableViewController id="A8H-xA-Cvn" customClass="MyTrainTableViewController" customModule="MyTrain" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ift-k6-ToO">
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <sections>
-                            <tableViewSection id="oh7-Tq-Mxa">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="qSD-0H-WUu">
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyTrainTableViewCell" rowHeight="52" id="qSD-0H-WUu" customClass="MyTrainTableViewCell" customModule="MyTrain" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qSD-0H-WUu" id="542-V9-ci7">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personnes connectées dans ce train" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vE-mi-l2A">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personnes connectées" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vE-mi-l2A">
                                                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="43.5" id="3b8-TV-8Oc">
-                                                            <variation key="heightClass=regular" constant="44"/>
+                                                            <variation key="heightClass=regular" constant="52"/>
                                                         </constraint>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
@@ -820,11 +757,13 @@
                                                         </mask>
                                                     </variation>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXXX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbW-mq-HvJ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXXXX" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbW-mq-HvJ">
                                                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                     <animations/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="54" id="Fc9-a4-pZB"/>
+                                                        <constraint firstAttribute="width" constant="54" id="Fc9-a4-pZB">
+                                                            <variation key="heightClass=regular" constant="70"/>
+                                                        </constraint>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                     <color key="textColor" red="0.12941176469999999" green="0.58823529409999997" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -845,7 +784,9 @@
                                             <constraints>
                                                 <constraint firstItem="sbW-mq-HvJ" firstAttribute="centerY" secondItem="542-V9-ci7" secondAttribute="centerY" id="1Kv-mD-ZKS"/>
                                                 <constraint firstItem="sbW-mq-HvJ" firstAttribute="leading" secondItem="542-V9-ci7" secondAttribute="leadingMargin" id="Kh7-cS-fA8"/>
-                                                <constraint firstItem="1vE-mi-l2A" firstAttribute="leading" secondItem="sbW-mq-HvJ" secondAttribute="trailing" constant="8" id="NZQ-ZV-4gt"/>
+                                                <constraint firstItem="1vE-mi-l2A" firstAttribute="leading" secondItem="sbW-mq-HvJ" secondAttribute="trailing" constant="8" id="NZQ-ZV-4gt">
+                                                    <variation key="heightClass=regular" constant="16"/>
+                                                </constraint>
                                                 <constraint firstItem="1vE-mi-l2A" firstAttribute="trailing" secondItem="542-V9-ci7" secondAttribute="trailingMargin" id="Sb5-Al-ECt"/>
                                                 <constraint firstItem="1vE-mi-l2A" firstAttribute="centerY" secondItem="542-V9-ci7" secondAttribute="centerY" id="tjm-Ab-iZV"/>
                                             </constraints>
@@ -878,19 +819,98 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="counterLabel" destination="sbW-mq-HvJ" id="dfG-9O-Tcy"/>
+                                            <outlet property="dataTypeLabel" destination="1vE-mi-l2A" id="Fhi-TV-M8p"/>
+                                        </connections>
                                     </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="A8H-xA-Cvn" id="0sL-mt-UeX"/>
-                            <outlet property="delegate" destination="A8H-xA-Cvn" id="aSq-6P-l7b"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XjG-6u-ok4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                                </prototypes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3dw-Is-HWq"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="3dw-Is-HWq"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="A3C-pI-Cjb" id="N2t-Db-wJX"/>
+                                    <outlet property="delegate" destination="A3C-pI-Cjb" id="hU3-3i-Thc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="dJC-O7-MDc" firstAttribute="trailing" secondItem="xaY-cg-JeI" secondAttribute="trailingMargin" id="6EB-RB-zl0"/>
+                            <constraint firstItem="dJC-O7-MDc" firstAttribute="top" secondItem="uTR-96-VUh" secondAttribute="bottom" constant="25" id="9vy-WL-7h0"/>
+                            <constraint firstItem="jny-pB-ytU" firstAttribute="top" secondItem="3m9-h4-75m" secondAttribute="bottom" id="Cjw-UZ-5xP"/>
+                            <constraint firstItem="3m9-h4-75m" firstAttribute="leading" secondItem="xaY-cg-JeI" secondAttribute="leading" id="NwP-0N-Khg"/>
+                            <constraint firstAttribute="trailing" secondItem="3m9-h4-75m" secondAttribute="trailing" id="Q94-c2-fBg"/>
+                            <constraint firstAttribute="trailing" secondItem="XsF-U3-2ra" secondAttribute="trailing" id="c7x-se-lye"/>
+                            <constraint firstItem="3m9-h4-75m" firstAttribute="top" secondItem="XsF-U3-2ra" secondAttribute="bottom" constant="8" id="mEZ-uD-Ovz">
+                                <variation key="heightClass=regular" constant="1"/>
+                            </constraint>
+                            <constraint firstItem="3m9-h4-75m" firstAttribute="centerX" secondItem="xaY-cg-JeI" secondAttribute="centerX" id="tNG-bd-Qhv"/>
+                            <constraint firstItem="XsF-U3-2ra" firstAttribute="leading" secondItem="xaY-cg-JeI" secondAttribute="leading" id="utj-oT-PWk"/>
+                            <constraint firstItem="dJC-O7-MDc" firstAttribute="leading" secondItem="xaY-cg-JeI" secondAttribute="leadingMargin" id="zPj-gV-Jqw"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="dJC-O7-MDc"/>
+                                <exclude reference="3m9-h4-75m"/>
+                                <exclude reference="XsF-U3-2ra"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="6EB-RB-zl0"/>
+                                <exclude reference="9vy-WL-7h0"/>
+                                <exclude reference="zPj-gV-Jqw"/>
+                                <exclude reference="c7x-se-lye"/>
+                                <exclude reference="utj-oT-PWk"/>
+                                <exclude reference="NwP-0N-Khg"/>
+                                <exclude reference="Q94-c2-fBg"/>
+                                <exclude reference="mEZ-uD-Ovz"/>
+                                <exclude reference="tNG-bd-Qhv"/>
+                                <exclude reference="Cjw-UZ-5xP"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="dJC-O7-MDc"/>
+                                <include reference="3m9-h4-75m"/>
+                                <include reference="XsF-U3-2ra"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="6EB-RB-zl0"/>
+                                <include reference="9vy-WL-7h0"/>
+                                <include reference="zPj-gV-Jqw"/>
+                                <include reference="c7x-se-lye"/>
+                                <include reference="utj-oT-PWk"/>
+                                <include reference="NwP-0N-Khg"/>
+                                <include reference="Q94-c2-fBg"/>
+                                <include reference="mEZ-uD-Ovz"/>
+                                <exclude reference="tNG-bd-Qhv"/>
+                                <include reference="Cjw-UZ-5xP"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Train" id="hfv-6j-Yee">
+                        <barButtonItem key="leftBarButtonItem" image="MenuIcon" id="5Sr-PD-AP8">
+                            <connections>
+                                <action selector="menuAction:" destination="A3C-pI-Cjb" id="xlr-Tp-Yv6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="XsF-U3-2ra" id="EaI-TT-ayS"/>
+                        <outlet property="trainAndCarLabel" destination="dJC-O7-MDc" id="IWn-x9-vGL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wf2-eC-fl6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3151" y="1348.875"/>
+            <point key="canvasLocation" x="2481" y="1171.5"/>
         </scene>
     </scenes>
     <resources>
@@ -898,5 +918,6 @@
         <image name="MenuIcon" width="22" height="22"/>
         <image name="MenuLogoImage" width="280" height="280"/>
         <image name="MenuMyTrainIcon" width="24" height="24"/>
+        <image name="WelcomeMyTrainTicketImage" width="165" height="165"/>
     </resources>
 </document>

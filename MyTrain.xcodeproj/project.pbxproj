@@ -21,7 +21,7 @@
 		DF7CE0341BD25700001CCFC4 /* WelcomeMyTrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CE0331BD25700001CCFC4 /* WelcomeMyTrainViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		DF7CE0381BD25FD6001CCFC4 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CE0371BD25FD6001CCFC4 /* UIColorExtension.swift */; settings = {ASSET_TAGS = (); }; };
 		DF7CE03B1BD2909C001CCFC4 /* MyTrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CE03A1BD2909C001CCFC4 /* MyTrainViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		DF7CE03D1BD293A5001CCFC4 /* MyTrainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CE03C1BD293A5001CCFC4 /* MyTrainTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		DF7CE03F1BD2ED8D001CCFC4 /* MyTrainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CE03E1BD2ED8D001CCFC4 /* MyTrainTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +65,7 @@
 		DF7CE0331BD25700001CCFC4 /* WelcomeMyTrainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeMyTrainViewController.swift; path = Views/WelcomeMyTrain/WelcomeMyTrainViewController.swift; sourceTree = "<group>"; };
 		DF7CE0371BD25FD6001CCFC4 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = Librairies/UIColorExtension.swift; sourceTree = "<group>"; };
 		DF7CE03A1BD2909C001CCFC4 /* MyTrainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTrainViewController.swift; path = Views/MyTrain/MyTrainViewController.swift; sourceTree = "<group>"; };
-		DF7CE03C1BD293A5001CCFC4 /* MyTrainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTrainTableViewController.swift; path = Views/MyTrain/MyTrainTableViewController.swift; sourceTree = "<group>"; };
+		DF7CE03E1BD2ED8D001CCFC4 /* MyTrainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTrainTableViewCell.swift; path = Views/MyTrain/MyTrainTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,7 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				DF7CE03A1BD2909C001CCFC4 /* MyTrainViewController.swift */,
-				DF7CE03C1BD293A5001CCFC4 /* MyTrainTableViewController.swift */,
+				DF7CE03E1BD2ED8D001CCFC4 /* MyTrainTableViewCell.swift */,
 			);
 			name = MyTrain;
 			sourceTree = "<group>";
@@ -392,8 +392,8 @@
 				DF7CDFEF1BD1B73C001CCFC4 /* AppDelegate.swift in Sources */,
 				DF7CE0341BD25700001CCFC4 /* WelcomeMyTrainViewController.swift in Sources */,
 				DF7CE0321BD256FA001CCFC4 /* WelcomeMyTrainTableViewController.swift in Sources */,
+				DF7CE03F1BD2ED8D001CCFC4 /* MyTrainTableViewCell.swift in Sources */,
 				DF7CDFF71BD1B73C001CCFC4 /* MyTrain.xcdatamodeld in Sources */,
-				DF7CE03D1BD293A5001CCFC4 /* MyTrainTableViewController.swift in Sources */,
 				DF7CE0241BD1C25F001CCFC4 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,7 +537,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MyTrain/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mytrainteam.MyTrain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -553,7 +553,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MyTrain/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mytrainteam.MyTrain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
