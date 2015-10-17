@@ -20,6 +20,8 @@
 		DF7CE0321BD256FA001CCFC4 /* WelcomeMyTrainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CE0311BD256FA001CCFC4 /* WelcomeMyTrainTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		DF7CE0341BD25700001CCFC4 /* WelcomeMyTrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CE0331BD25700001CCFC4 /* WelcomeMyTrainViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		DF7CE0381BD25FD6001CCFC4 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CE0371BD25FD6001CCFC4 /* UIColorExtension.swift */; settings = {ASSET_TAGS = (); }; };
+		DF7CE03B1BD2909C001CCFC4 /* MyTrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CE03A1BD2909C001CCFC4 /* MyTrainViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		DF7CE03D1BD293A5001CCFC4 /* MyTrainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CE03C1BD293A5001CCFC4 /* MyTrainTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		DF7CE0311BD256FA001CCFC4 /* WelcomeMyTrainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeMyTrainTableViewController.swift; path = Views/WelcomeMyTrain/WelcomeMyTrainTableViewController.swift; sourceTree = "<group>"; };
 		DF7CE0331BD25700001CCFC4 /* WelcomeMyTrainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeMyTrainViewController.swift; path = Views/WelcomeMyTrain/WelcomeMyTrainViewController.swift; sourceTree = "<group>"; };
 		DF7CE0371BD25FD6001CCFC4 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = Librairies/UIColorExtension.swift; sourceTree = "<group>"; };
+		DF7CE03A1BD2909C001CCFC4 /* MyTrainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTrainViewController.swift; path = Views/MyTrain/MyTrainViewController.swift; sourceTree = "<group>"; };
+		DF7CE03C1BD293A5001CCFC4 /* MyTrainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTrainTableViewController.swift; path = Views/MyTrain/MyTrainTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +171,7 @@
 			children = (
 				DF7CE0201BD1BE1F001CCFC4 /* Menu */,
 				DF7CE02A1BD1C325001CCFC4 /* WelcomeMyTrain */,
+				DF7CE0391BD29074001CCFC4 /* MyTrain */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -204,6 +209,15 @@
 				DF7CE0371BD25FD6001CCFC4 /* UIColorExtension.swift */,
 			);
 			name = Librairies;
+			sourceTree = "<group>";
+		};
+		DF7CE0391BD29074001CCFC4 /* MyTrain */ = {
+			isa = PBXGroup;
+			children = (
+				DF7CE03A1BD2909C001CCFC4 /* MyTrainViewController.swift */,
+				DF7CE03C1BD293A5001CCFC4 /* MyTrainTableViewController.swift */,
+			);
+			name = MyTrain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,11 +387,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF7CE02E1BD1C5F5001CCFC4 /* MenuTableViewCell.swift in Sources */,
+				DF7CE03B1BD2909C001CCFC4 /* MyTrainViewController.swift in Sources */,
 				DF7CE0381BD25FD6001CCFC4 /* UIColorExtension.swift in Sources */,
 				DF7CDFEF1BD1B73C001CCFC4 /* AppDelegate.swift in Sources */,
 				DF7CE0341BD25700001CCFC4 /* WelcomeMyTrainViewController.swift in Sources */,
 				DF7CE0321BD256FA001CCFC4 /* WelcomeMyTrainTableViewController.swift in Sources */,
 				DF7CDFF71BD1B73C001CCFC4 /* MyTrain.xcdatamodeld in Sources */,
+				DF7CE03D1BD293A5001CCFC4 /* MyTrainTableViewController.swift in Sources */,
 				DF7CE0241BD1C25F001CCFC4 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

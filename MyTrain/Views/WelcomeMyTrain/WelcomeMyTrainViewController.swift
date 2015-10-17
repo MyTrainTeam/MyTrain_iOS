@@ -11,15 +11,19 @@ import UIKit
 class WelcomeMyTrainViewController: UIViewController {
 
     @IBOutlet weak var tableViewContainer: UIView!
+    @IBOutlet weak var compostTicketButton: UIButton!
     var welcomeMyTrainTVC: WelcomeMyTrainTableViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.slidingViewController()?.topViewAnchoredGesture = [ECSlidingViewControllerAnchoredGesture.Panning, ECSlidingViewControllerAnchoredGesture.Tapping]
+        self.slidingViewController()?.topViewController.view.addGestureRecognizer(self.slidingViewController().panGesture!)
 
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
 
+        self.compostTicketButton.layer.cornerRadius = 4
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -44,6 +48,25 @@ class WelcomeMyTrainViewController: UIViewController {
         self.slidingViewController()?.anchorTopViewToRightAnimated(true)
     }
 
+    @IBAction func compostTicketAction(sender: AnyObject) {
+        guard let trainNumber = self.welcomeMyTrainTVC?.trainNumberTextField.text,
+            let carNumber = self.welcomeMyTrainTVC?.carNumberTextField.text
+            where !trainNumber.isEqual("") && !carNumber.isEqual("") else {
+                SVProgressHUD.showErrorWithStatus("N° train et N° voiture\n doivent être renseignés")
+                return
+        }
+
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        userDefaults.setValue(trainNumber, forKey: "trainNumber")
+        userDefaults.setValue(carNumber, forKey: "carNumber")
+        userDefaults.synchronize()
+
+        let viewController = self.storyboard?.instantiateViewControllerWithIdentifier("MyTrainNavigationController")
+        self.slidingViewController()?.topViewController = viewController
+        self.slidingViewController()?.resetTopViewAnimated(true)
+    }
+
+
     // MARK: - Navigation
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -51,8 +74,7 @@ class WelcomeMyTrainViewController: UIViewController {
         if segue.identifier == "WelcomeMyTrainTableViewController" {
             self.welcomeMyTrainTVC = segue.destinationViewController as? WelcomeMyTrainTableViewController
         }
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+
     }
 
 }

@@ -18,10 +18,22 @@ class MenuTableViewCell: UITableViewCell {
 
     var item: String = "" {
         didSet {
-            itemLabel.text = item
             switch(item){
             case "My Train" :
-                itemImageView.image = UIImage(named: "MenuLogoImage")
+                itemImageView.image = UIImage(named: "MenuMyTrainIcon")
+                itemLabel.text = "My Train"
+            case "Messages" :
+                itemImageView.image = UIImage(named: "MenuMessagesIcon")
+                itemLabel.text = "Messages"
+            case "Friends" :
+                itemImageView.image = UIImage(named: "MenuFriendsIcon")
+                itemLabel.text = "Contacts"
+            case "Profile" :
+                itemImageView.image = UIImage(named: "MenuProfileIcon")
+                itemLabel.text = "Profil"
+            case "Settings" :
+                itemImageView.image = UIImage(named: "MenuSettingsIcon")
+                itemLabel.text = "Paramètres"
             default:
                 itemImageView.image = UIImage()
             }

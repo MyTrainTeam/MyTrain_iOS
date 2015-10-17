@@ -12,18 +12,25 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     @IBOutlet weak var tableView: UITableView!
 
-    let menuItems = ["My Train"]
+    let menuItems = ["My Train", "Messages", "Friends", "Profile", "Settings"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.slidingViewController()?.topViewAnchoredGesture = [ECSlidingViewControllerAnchoredGesture.Panning, ECSlidingViewControllerAnchoredGesture.Tapping]
-        self.slidingViewController()?.topViewController.view.addGestureRecognizer(self.slidingViewController().panGesture!)
+        self.showMyTrainPage()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    private func showMyTrainPage() {
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        var viewController: UIViewController?
+        if let _ = userDefaults.valueForKey("trainNumber"),
+            let _ = userDefaults.valueForKey("carNumber")
+        {
+            viewController = self.storyboard?.instantiateViewControllerWithIdentifier("MyTrainNavigationController")
+        } else {
+            viewController = self.storyboard?.instantiateViewControllerWithIdentifier("WelcomeMyTrainNavigationController")
+        }
+        self.slidingViewController()?.topViewController = viewController
     }
 
     // MARK: - UITableViewDataSource
@@ -53,18 +60,14 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch(menuItems[indexPath.row]){
         case "My Train" :
-            let viewController = self.storyboard?.instantiateViewControllerWithIdentifier("MyTrainNavigationController")
-            self.slidingViewController()?.topViewController = viewController!
+
+            self.showMyTrainPage()
             self.slidingViewController()?.resetTopViewAnimated(true)
+
         default:
             SVProgressHUD.showErrorWithStatus("Peinture fraiche !")
             break
         }
-
-        self.slidingViewController()?.topViewAnchoredGesture = [ECSlidingViewControllerAnchoredGesture.Panning, ECSlidingViewControllerAnchoredGesture.Tapping]
-        self.slidingViewController()?.topViewController.view.addGestureRecognizer(self.slidingViewController().panGesture!)
-
-        self.slidingViewController()?.resetTopViewAnimated(true)
 
         self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
